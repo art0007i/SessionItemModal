@@ -18,7 +18,7 @@ namespace SessionItemModal
     {
         public override string Name => "SessionItemModal";
         public override string Author => "art0007i";
-        public override string Version => "1.0.0";
+        public override string Version => "1.0.1";
         public override string Link => "https://github.com/art0007i/SessionItemModal/";
         public override void OnEngineInit()
         {
@@ -42,7 +42,7 @@ namespace SessionItemModal
                         id = __instance.SessionInfo.CorrespondingWorldId.ToString();
                     }
                     var a = new SessionInfo[] { __instance.SessionInfo };
-                    b.Slot.OpenModalOverlay(float2.One * 0.8f)?.Slot.AttachComponent<WorldDetail>().SetTarget(id, prefetchedInfo: a);
+                    b.Slot.OpenModalOverlay(float2.One * 0.8f)?.Slot.AttachComponent<LegacyWorldDetail>().SetTarget(id, prefetchedInfo: a);
                 };
             }
         }
